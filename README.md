@@ -3,6 +3,7 @@ Add a tip box to the jQuery element. The tip box will show on mouse hover.
 The tip is always point to the center of the element, and will be resized to fit the content.    
 
 ![preview](https://raw.githubusercontent.com/Rendxx/TipBox/master/preview.png "Preview")
+
 *Sample: [http://www.rendxx.com/Lib/Sample/2](http://www.rendxx.com/Lib/Sample/2 "Sample")*  
 *Download: [TipBox v2.1](https://github.com/Rendxx/TipBox/releases/tag/2.1 "Download")*
 
