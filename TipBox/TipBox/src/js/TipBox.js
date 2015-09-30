@@ -238,11 +238,8 @@ API:
                 "left": -pointer_wid / 2 + "px"
             });
             box.css({
-                "left": "0px",
-                "bottom": "0px",
-                "margin-top":"auto",
-                "margin-bottom": pointer_hgt + "px",
-                "margin-left": -wid_wrap / 2 + options["offset"] + "px"
+                "left": -wid_wrap / 2 + options["offset"] + "px",
+                "bottom": pointer_hgt + "px"
             });
             wrap.css({
                 "margin-top": -options.margin + "px"
@@ -253,14 +250,11 @@ API:
                 "left": -pointer_wid / 2 + "px"
             });
             box.css({
-                "top": "0px",
-                "left": "0px",
-                "margin-top": pointer_hgt + "px",
-                "margin-left": -wid_wrap / 2 + options["offset"] + "px"
+                "top": pointer_hgt + "px",
+                "left": -wid_wrap / 2 + options["offset"] + "px"
             });
             wrap.css({
-                "margin-top": "auto",
-                "margin-bottom": -options.margin + "px"
+                "margin-top": options.margin + "px"
             });
         } else if (options.orientation == "left") {
             pointer.css({
@@ -268,11 +262,8 @@ API:
                 "right":"0"
             });
             box.css({
-                "top": "0px",
-                "right": "0px",
-                "margin-left": "auto",
-                "margin-top": -hgt_wrap / 2 + options["offset"] + "px",
-                "margin-right": pointer_wid + "px"
+                "top": -hgt_wrap / 2 + options["offset"] + "px",
+                "right": pointer_wid + "px"
             });
             wrap.css({
                 "margin-left": -options.margin + "px"
@@ -283,12 +274,13 @@ API:
                 "left": "0"
             });
             box.css({
+                "top": "0px",
+                "left": "0px",
                 "margin-top": -hgt_wrap / 2 + options["offset"] + "px",
                 "margin-left": pointer_wid + "px"
             });
             wrap.css({
-                "margin-left": "auto",
-                "margin-right": -options.margin + "px"
+                "margin-left": options.margin + "px"
             });
         }
 
