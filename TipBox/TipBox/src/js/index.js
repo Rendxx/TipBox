@@ -7,30 +7,26 @@ $(function () {
     var squ2 = $(".squ2");
     var squ3 = $(".squ3");
     var squ4 = $(".squ4");
-    squ1.tip({
-        content: "Default options with plain text. Customize: Width / Font",
-        width: 200,
-        orientation: "top",
-        css: {
-            "width": "200px",
-            "font-family": "Raleway"
-        }
-    });
+    squ1.tip("Default options with plain text.");
+
     squ2.tip({
-        content: "Customize: color / margin / padding",
+        content: "Customize: color / margin / padding / width / font",
         orientation: "left",
         margin: 30,
         css: {
             "background-color": "#ddd",
             "color": "#333",
-            "padding": "20px"
+            "padding": "20px",
+            "width": "200px",
+            "font-family": "Raleway"
         }
     });
-    squ3.tip({
-        content: sampleHtml1,
-        orientation: "bottom",
-        offset: 80
-    });
+
+    squ3.tip(sampleHtml1, "bottom",
+        {
+            css: { offset: 80 }
+        });
+
     squ4.tip({
         content: sampleHtml2,
         orientation: "right",

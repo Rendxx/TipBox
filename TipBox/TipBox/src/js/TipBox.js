@@ -3,11 +3,11 @@ Tip Box
 Copyright (c) 2014-2015 Dongxu Ren  http://www.rendxx.com/
 
 License: MIT (http://www.opensource.org/licenses/mit-license.php)
-Version: 2.0
-Update: 2015-09-02
+Version: 2.1
+Update: 2015-09-30
 
 Description:
-    Add a mouse tip to the jQuery element.
+    Add a tip box to the jQuery element. The tip box will show on mouse hover.
     The tip is always point to the center of the element, and will be resized to fit the content.
     
 Compatibility:
@@ -25,6 +25,25 @@ API:
             offset: (number) offset the tipbox left / right from center position
             cssClass: (string) name of css class, this css class will apply to the tip box
             css: (object) the css apply to the tip box, rule is the same as $.css()
+
+    [jQuery Element].tip(content, orientation, options)
+        - content:  same as above
+        - orientation: same as above
+        - options:
+            margin: (number) distance between the tip box and the object element
+            offset: (number) offset the tipbox left / right from center position
+            cssClass: (string) name of css class, this css class will apply to the tip box
+            css: (object) the css apply to the tip box, rule is the same as $.css()
+
+    [jQuery Element].tip(content, orientation)
+        - content: same as above 
+        - orientation: same as above 
+
+    [jQuery Element].tip(content)
+        - content: same as above
+
+    [jQuery Element].tip()
+        clear tip
 
 ************************************************/
 
@@ -303,8 +322,31 @@ API:
     };
     // -------------------------------------------------------------------------
     
-    $.fn.tip = function (options) {
-        var options = $.extend(true, $.extend(true, {}, $.fn.tip.defaults), options);
+    $.fn.tip = function () {
+        // handle arguements
+        var options = $.extend(true, {}, $.fn.tip.defaults);
+        if (arguments.length == 0) {   // No argument: clear tip
+            options = null;
+        } else if (arguments.length == 1) {
+            if (arguments[0] == null) {
+                options = null;
+            } else if (typeof arguments[0] == 'string' || (typeof arguments[0] == 'object' && arguments[0] instanceof $)) { // [content]
+                options.content = arguments[0];
+            } else if (typeof arguments[0] == 'object') { // [opts]
+                $.extend(true, options, arguments[0]);
+            } else { // error
+                return; 
+            }
+        } else if (arguments.length == 2) { // [content, orientation]
+            options.content = arguments[0];
+            options.orientation = arguments[1];
+        } else if (arguments.length == 3) { // [content, orientation, opts]
+            options.content = arguments[0];
+            options.orientation = arguments[1];
+            $.extend(true, options, arguments[2]);
+        } else { // illegal arguments          
+            return;
+        }
 
         this.each(function () {
             var $this = $(this);
