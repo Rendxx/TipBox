@@ -22,7 +22,7 @@ Create a customized tip box and bind to the jQuery element.
   + **cssClass**: (string) name of css class, this css class will apply to the tip box
   + **css**: (object) the css apply to the tip box, rule is the same as $.css()
 
-######  &nbsp;
+<div><br></div>
 
     [jQuery Element].tip(content, orientation, options)
 
@@ -30,27 +30,42 @@ Create a customized tip box and bind to the jQuery element.
 - orientation: *[same as above]*  
 - options: *[same as above]* 
 
-######  &nbsp;
+<div><br></div>
 
     [jQuery Element].tip(content, orientation,)
 
 - content: *[same as above]*    
 - orientation: *[same as above]*  
 
-######  &nbsp;
+<div><br></div>
 
     [jQuery Element].tip(content)
 
 - content: *[same as above]*    
 
-######  &nbsp;
+<div><br></div>
 
     [jQuery Element].tip()
     [jQuery Element].tip(null)
 
 Clear the tip on the jQuery element
 
-######  &nbsp;
+<div><br></div>
+
+# Code Sample
+JavaScript:
+
+    $(".squ").tip({
+        content: "Customize: color / margin / padding / width / font",
+        orientation: "left",
+        css: {
+            "background-color": "#ddd",
+            "color": "#333",
+            "padding": "20px",
+            "width": "200px",
+            "font-family": "Raleway"
+        }
+    });
 
 # Compatibility
 - Chrome
