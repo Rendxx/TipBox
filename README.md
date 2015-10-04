@@ -7,26 +7,28 @@ The tip is always point to the center of the element, and will be resized to fit
 *Sample: [http://www.rendxx.com/Lib/Sample/2](http://www.rendxx.com/Lib/Sample/2 "Sample")*  
 *Download: [TipBox v2.1](https://github.com/Rendxx/TipBox/releases/tag/2.1 "Download")*
 
-# Dependency
-- [jQuery][]
-
 # API
 [API Document](https://github.com/Rendxx/TipBox/blob/master/API%20Document.md)
+
+# Dependency
+- [jQuery][]
 
 # Code Sample
 JavaScript:
 
-    $(".squ").tip({
-        content: "Customize: color / margin / padding / width / font",
-        orientation: "left",
-        css: {
-            "background-color": "#ddd",
-            "color": "#333",
-            "padding": "20px",
-            "width": "200px",
-            "font-family": "Raleway"
-        }
-    });
+```javascript
+$(".squ").tip({
+    content: "Customize: color / margin / padding / width / font",
+    orientation: "left",
+    css: {
+        "background-color": "#ddd",
+        "color": "#333",
+        "padding": "20px",
+        "width": "200px",
+        "font-family": "Raleway"
+    }
+});
+```
 
 # Compatibility
 - Chrome
