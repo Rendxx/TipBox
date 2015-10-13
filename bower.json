@@ -1,0 +1,32 @@
+{
+  "name": "TipBox",
+  "description": "Add a tip box to the jQuery element. The tip box will show on mouse hover.",
+  "main": [
+    "js/TipBox.js"
+  ],
+  "dependencies": {
+    "jquery": "1.11.2"
+  },
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "tip",
+    "mouse",
+    "mouse tip",
+    "hover"
+  ],
+  "authors": [
+    "Dongxu Ren <rendxx@gmail.com> http://www.rendxx.com"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "*",
+    "!js/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Rendxx/TipBox.git"
+  },
+  "private": false
+}
