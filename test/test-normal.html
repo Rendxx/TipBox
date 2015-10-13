@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="../lib/jquery.js"></script>
+    <script type="text/javascript" src="../js/TipBox.js"></script>
+    <script type="text/javascript" src="sample.js"></script>
+    <link type="text/css" rel="stylesheet" href="sample.css" />
+    <title>Normal [TipBox]</title>
+    <style type="text/css">
+        body {
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABEklEQVRoge2ZwQ6DIAyGgSz6AkuM953YxbfY42N26Gl3s2QvgEGzK4cJxs46un43mkr5Q/glVKkMANDmclL0fX/DfJ+rbzCT/wK8BQBA671vqBazpT7vHSiBpABr7VDX9ZNqMVvqn+JBbFnW2uEb8XEcUfN77xsAWMzX8SA+MLFyTFxr3VRVdd9r/iQA0DrnulXJC2B+ZGvq8z7EJVC8C/HegRKQu9DR8BYgLkQAbwHiQgQUL0Bj321yGGMu8zw/9qyRRB62dkZc6Gh4C5C7EAG8BYgLEcBbgLgQAcULSPYH4vf5OL6U/ymO6Q8457oQwnlzf+CThVH2B0IIV6WUmqbp9Z/9AXEhAngLkLsQAcULeANxPile0TMhiAAAAABJRU5ErkJggg==");
+        }
+
+        .btn {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            background-color: #ddd;
+            font-family: Calibri;
+            color: #333;
+            border-radius: 20px;
+            cursor: default;
+            top:50%;
+            left:50%;
+        }
+        .btn.btn-1 {
+            margin: -70px auto auto -20px;
+        }
+        .btn.btn-2 {
+            margin: -20px auto auto -70px;
+        }
+        .btn.btn-3 {
+            margin: 30px auto auto -20px;
+        }
+        .btn.btn-4 {
+            margin: -20px auto auto 30px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $(".btn-1").tip("Default options witherts");
+            $(".btn-2").tip("Default options withert  ew qwes", "left");
+            $(".btn-3").tip("Default options withqwe erts", "bottom");
+            $(".btn-4").tip("Default options witherts ewr ee", "right");
+        });
+    </script>
+</head>
+<body>
+    <div class="btn btn-1">1</div>
+    <div class="btn btn-2">2</div>
+    <div class="btn btn-3">3</div>
+    <div class="btn btn-4">4</div>
+</body>
+</html>
