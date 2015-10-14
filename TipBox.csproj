@@ -18,6 +18,7 @@
     <Content Include="js\TipBox.js" />
     <Content Include="js\TipBox.min.js" />
     <Content Include="src\js\TipBox.js" />
+    <Content Include="test\test-option.html" />
     <Content Include="test\test-3.html" />
     <Content Include="test\test-2.html" />
     <Content Include="test\sample-icon.png" />

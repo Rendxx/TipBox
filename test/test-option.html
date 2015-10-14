@@ -7,7 +7,7 @@
     <script type="text/javascript" src="../js/TipBox.js"></script>
     <script type="text/javascript" src="sample.js"></script>
     <link type="text/css" rel="stylesheet" href="sample.css" />
-    <title>3 [TipBox]</title>
+    <title>Option [TipBox]</title>
     <style type="text/css">
         body {
             background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABEklEQVRoge2ZwQ6DIAyGgSz6AkuM953YxbfY42N26Gl3s2QvgEGzK4cJxs46un43mkr5Q/glVKkMANDmclL0fX/DfJ+rbzCT/wK8BQBA671vqBazpT7vHSiBpABr7VDX9ZNqMVvqn+JBbFnW2uEb8XEcUfN77xsAWMzX8SA+MLFyTFxr3VRVdd9r/iQA0DrnulXJC2B+ZGvq8z7EJVC8C/HegRKQu9DR8BYgLkQAbwHiQgQUL0Bj321yGGMu8zw/9qyRRB62dkZc6Gh4C5C7EAG8BYgLEcBbgLgQAcULSPYH4vf5OL6U/ymO6Q8457oQwnlzf+CThVH2B0IIV6WUmqbp9Z/9AXEhAngLkLsQAcULeANxPile0TMhiAAAAABJRU5ErkJggg==");
@@ -48,11 +48,25 @@
     </style>
     <script>
         $(function () {
-            $(".btn-1").tip("Default options witherts", "left", { 'margin': 30 });
-            $(".btn-2").tip("Default options witherts", "left", { 'offset': 10 });
-            $(".btn-3").tip("Default options witherts", "left", { 'cssClass': 'test' });
-            $(".btn-4").tip("Default options witherts", "left", {
-                'css': {
+            $(".btn-1").tip({
+                content: "Default options witherts",
+                orientation: "right",
+                margin: 30
+            });
+            $(".btn-2").tip({
+                content: "Default options witherts",
+                orientation: "right",
+                offset: 10
+            });
+            $(".btn-3").tip({
+                content: "Default options witherts",
+                orientation: "right",
+                cssClass: 'test'
+            });
+            $(".btn-4").tip({
+                content: "Default options witherts",
+                orientation: "right",
+                css: {
                     color: '#ff6a00'
                 }
             });
