@@ -18,7 +18,7 @@ Including the file in your webpage
 <script type="text/javascript" src="/node_modules/TipBox/js/TipBox.js"></script>
 ```
 
-See **Sample** below for more details.
+See **Code Sample** below for more details.
 
 # API
 [API Document](https://github.com/Rendxx/TipBox/blob/master/API%20Document.md)
