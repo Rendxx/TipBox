@@ -4,7 +4,7 @@ Copyright (c) 2014-2015 Dongxu Ren  http://www.rendxx.com/
 
 License: MIT (http://www.opensource.org/licenses/mit-license.php)
 Version: 0.2.2
-Update: 2015-09-30
+Update: 2015-10-14
 
 Description:
     Add a tip box to the jQuery element. The tip box will show on mouse hover.
@@ -64,21 +64,23 @@ API:
         var offset = $this.offset();
         if (tipData.ele == null) {
             tipData.ele = _createTip(tipData.opts);
+            tipData.orientation = tipData.opts.orientation;
             delete tipData["opts"];
         }
 
         var top = 0;
         var left = 0;
-        if (tipData.orientation == "top") {
+        var orientation = tipData.orientation;
+        if (orientation == "top") {
             top = offset.top;
             left = offset.left + $this.width() / 2;
-        } else if (tipData.orientation == "bottom") {
+        } else if (orientation == "bottom") {
             top = offset.top + $this.height();
             left = offset.left + $this.width() / 2;
-        } else if (tipData.orientation == "right") {
+        } else if (orientation == "right") {
             top = offset.top + $this.height() / 2;
             left = offset.left + $this.width();
-        } else if (tipData.orientation == "left") {
+        } else if (orientation == "left") {
             top = offset.top + $this.height() / 2;
             left = offset.left;
         }
@@ -357,7 +359,7 @@ API:
             if (options == null || options.content == null || options.content == "") return;
             if (typeof options.content == 'object' && options.content instanceof $) options.content = options.content.clone(true);
             // create new tip & hover function
-            $this.data(keyName, {ele:null, opts:options, orientation: options.orientation});
+            $this.data(keyName, {ele:null, opts:options});
             $this.bind('mouseenter',  _showTip);
             $this.bind('mouseleave', _hideTip);
             //if (window.event && $this.contains(window.event.srcElement)) $this.mouseenter()
