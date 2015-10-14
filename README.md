@@ -31,11 +31,6 @@ $(".squ").tip({
 ```
 
 # Compatibility
-- Chrome
-- Fire Fox
-- Safari
-- Edge
-- IE 9-11
-- IE 7,8
+```Chrome``` ```Fire Fox``` ```Safari``` ```Edge``` ```IE 9-11``` ```IE 7,8```
 
 [jQuery]: https://jquery.com/ "jQuery Home Page"
