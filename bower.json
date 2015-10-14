@@ -1,6 +1,6 @@
 {
   "name": "TipBox",
-  "description": "Add a tip box to the jQuery element. The tip box will show on mouse hover.",
+  "description": "Add a tip box to a jQuery element. The tip box will show on mouse hover.",
   "main": [
     "js/TipBox.js"
   ],

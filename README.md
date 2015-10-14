@@ -5,7 +5,7 @@ The tip is always point to the center of the element, and will be resized to fit
 ![preview](https://raw.githubusercontent.com/Rendxx/TipBox/master/preview.png "Preview")
 
 *Sample: [http://www.rendxx.com/Lib/Sample/2](http://www.rendxx.com/Lib/Sample/2 "Sample")*  
-*Download: [TipBox v2.1](https://github.com/Rendxx/TipBox/releases/tag/2.1 "Download")*
+*Download: [TipBox v0.2.2](https://github.com/Rendxx/TipBox/releases/tag/0.2.2 "Download")*
 
 # API
 [API Document](https://github.com/Rendxx/TipBox/blob/master/API%20Document.md)

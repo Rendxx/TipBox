@@ -1,47 +1,49 @@
 
 # API Document
 
-## Create TipBox with Options
-    $(jQuery Element).tip(options);
+#### $(jQuery Element).tip(options);
 
 Create a customized tip box and bind to the jQuery element. 
 
-- **options**: options
-  + **content**: ([jQuery element]/string) content of the tip, the old tip box(if exist) will be clear if content is empty
-  + **orientation**: (string) top/left/bottom/right, default:top
-  + **margin**: (number) distance between the tip box and the object element
-  + **offset**: (number) offset the tipbox left / right from center position
-  + **cssClass**: (string) name of css class, this css class will apply to the tip box
-  + **css**: (object) the css apply to the tip box, rule is the same as $.css()
+- **options** ```object```  
+  An object contains all parameters
+
+  + **content** ```string``` ```jQuery object```    
+    Content of the tip, the old tip box(if exist) will be clear if content is empty
+
+  + **orientation** ```string```  
+    Available value: ```"top"``` *(default)* / ```"left"``` / ```"bottom"``` / ```"right "``` 
+
+  + **margin** ```number```  
+    Distance between the tip box and the object element
+
+  + **offset** ```number```  
+    Offset the tipbox left / right from center position
+
+  + **cssClass** ```string```  
+    Name of css class, this css class will apply to the tip box
+
+  + **css** ```object```  
+    The css apply to the tip box, rule is the same as ```$.css()```
 
 <div><br></div>
 
-    $(jQuery Element).tip(content, orientation, options);
+#### $(jQuery Element).tip(content [, orientation [, options]]);
 
 Create a customized tip box and bind to the jQuery element. 
 
-- content: *[same as above]*    
-- orientation: *[same as above]*  
-- options: *[same as above]* 
+- **content** ```string``` ```jQuery object```   
+  *[same as above]*    
+
+- **orientation** ```string```  
+  *[same as above]*  
+
+- **options** ```object```    
+  *[same as above]* 
 
 <div><br></div>
 
-## Create TipBox with Content
-    $(jQuery Element).tip(content, orientation);
-
-- content: *[same as above]*    
-- orientation: *[same as above]*  
-<div><br></div>
-
-    $(jQuery Element).tip(content);
-
-- content: *[same as above]*    
-<div><br></div>
-
-## Clear TipBox
-
-    [jQuery Element].tip()
-    [jQuery Element].tip(null)
+#### $(jQuery Element).tip()
 
 Clear the tip on the jQuery element
 
