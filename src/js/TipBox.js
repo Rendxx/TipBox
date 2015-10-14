@@ -355,6 +355,7 @@ API:
             if (oldTip != null && oldTip.ele != null) oldTip.ele.remove();
             $this.unbind('mouseenter', _showTip).unbind('mouseleave', _hideTip);
             if (options == null || options.content == null || options.content == "") return;
+            if (typeof options.content == 'object' && options.content instanceof $) options.content = options.content.clone(true);
             // create new tip & hover function
             $this.data(keyName, {ele:null, opts:options, orientation: options.orientation});
             $this.bind('mouseenter',  _showTip);

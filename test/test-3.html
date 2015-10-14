@@ -7,7 +7,7 @@
     <script type="text/javascript" src="../js/TipBox.js"></script>
     <script type="text/javascript" src="sample.js"></script>
     <link type="text/css" rel="stylesheet" href="sample.css" />
-    <title>Normal [TipBox]</title>
+    <title>3 [TipBox]</title>
     <style type="text/css">
         body {
             background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABEklEQVRoge2ZwQ6DIAyGgSz6AkuM953YxbfY42N26Gl3s2QvgEGzK4cJxs46un43mkr5Q/glVKkMANDmclL0fX/DfJ+rbzCT/wK8BQBA671vqBazpT7vHSiBpABr7VDX9ZNqMVvqn+JBbFnW2uEb8XEcUfN77xsAWMzX8SA+MLFyTFxr3VRVdd9r/iQA0DrnulXJC2B+ZGvq8z7EJVC8C/HegRKQu9DR8BYgLkQAbwHiQgQUL0Bj321yGGMu8zw/9qyRRB62dkZc6Gh4C5C7EAG8BYgLEcBbgLgQAcULSPYH4vf5OL6U/ymO6Q8457oQwnlzf+CThVH2B0IIV6WUmqbp9Z/9AXEhAngLkLsQAcULeANxPile0TMhiAAAAABJRU5ErkJggg==");
@@ -24,28 +24,32 @@
             color: #333;
             border-radius: 20px;
             cursor: default;
-            top:50%;
+            top:50px;
             left:50%;
+            margin:0;
+            margin-left:-20px;
         }
         .btn.btn-1 {
-            margin: -70px auto auto -20px;
+            margin-top: 100px;
         }
         .btn.btn-2 {
-            margin: -20px auto auto -70px;
+            margin-top: 200px;
         }
         .btn.btn-3 {
-            margin: 30px auto auto -20px;
+            margin-top: 300px;
         }
         .btn.btn-4 {
-            margin: -20px auto auto 30px;
+            margin-top: 400px;
         }
     </style>
     <script>
         $(function () {
-            $(".btn-1").tip("Default options witherts");
-            $(".btn-2").tip("Default options withert  ew qwes", "left");
-            $(".btn-3").tip("Default options withqwe erts", "bottom");
-            $(".btn-4").tip("Default options witherts ewr ee", "right");
+            var sampleHtml1 = $("<div class='tip-content'><div class='icon'></div><div class='text'>Html content<br/>Customize: offset</div></div>");
+
+            $(".btn-1").tip("Default options witherts", "left");
+            $(".btn-2").tip("Default options witherts", "right");
+            $(".btn-3").tip(sampleHtml1, "left");
+            $(".btn-4").tip(sampleHtml1, "right");
         });
     </script>
 </head>
