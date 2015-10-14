@@ -7,6 +7,19 @@ The tip is always point to the center of the element, and will be resized to fit
 *Sample: [http://www.rendxx.com/Lib/Sample/2](http://www.rendxx.com/Lib/Sample/2 "Sample")*  
 *Download: [TipBox v0.2.2](https://github.com/Rendxx/TipBox/releases/tag/0.2.2 "Download")*
 
+# Install
+Download the package from bower
+```
+bower install TipBox --save
+```
+
+Including the file in your webpage
+```HTML
+<script type="text/javascript" src="/node_modules/TipBox/js/TipBox.js"></script>
+```
+
+See **Sample** below for more details.
+
 # API
 [API Document](https://github.com/Rendxx/TipBox/blob/master/API%20Document.md)
 
