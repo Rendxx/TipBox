@@ -46,4 +46,9 @@ $(".squ").tip({
 # Compatibility
 ```Chrome``` ```Fire Fox``` ```Safari``` ```Edge``` ```IE 9-11``` ```IE 7,8```
 
+## License 
+Copyright &copy; 2015, Rendxx. (MIT License)  
+See [LICENSE][] for more info.
+
 [jQuery]: https://jquery.com/ "jQuery Home Page"
+[LICENSE]: https://github.com/Rendxx/TipBox/blob/master/LICENSE
