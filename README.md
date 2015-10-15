@@ -7,7 +7,7 @@ The tip is always point to the center of the element, and will be resized to fit
 *Sample: [http://www.rendxx.com/Lib/Sample/2](http://www.rendxx.com/Lib/Sample/2 "Sample")*  
 *Download: [TipBox v0.2.2](https://github.com/Rendxx/TipBox/releases/tag/0.2.2 "Download")*
 
-# Install
+## Install
 Download the package from bower
 ```
 bower install TipBox --save
@@ -20,13 +20,13 @@ Including the file in your webpage
 
 See **Code Sample** below for more details.
 
-# API
+## API
 [API Document](https://github.com/Rendxx/TipBox/blob/master/API%20Document.md)
 
-# Dependency
+## Dependency
 - [jQuery][]
 
-# Code Sample
+## Code Sample
 JavaScript:
 
 ```javascript
@@ -43,10 +43,10 @@ $(".squ").tip({
 });
 ```
 
-# Compatibility
+## Compatibility
 ```Chrome``` ```Fire Fox``` ```Safari``` ```Edge``` ```IE 9-11``` ```IE 7,8```
 
-# License 
+## License
 Copyright &copy; 2015, Rendxx. (MIT License)  
 See [LICENSE][] for more info.
 
