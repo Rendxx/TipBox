@@ -46,7 +46,7 @@ $(".squ").tip({
 # Compatibility
 ```Chrome``` ```Fire Fox``` ```Safari``` ```Edge``` ```IE 9-11``` ```IE 7,8```
 
-## License 
+# License 
 Copyright &copy; 2015, Rendxx. (MIT License)  
 See [LICENSE][] for more info.
 
