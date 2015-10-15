@@ -26,7 +26,7 @@ Create a customized tip box and bind to the jQuery element.
   + **css** ```object```  
     The css apply to the tip box, rule is the same as ```$.css()```
 
-<div><br></div>
+<h1></h1>
 
 #### $(jQuery Element).tip(content [, orientation [, options]]);
 
@@ -41,10 +41,9 @@ Create a customized tip box and bind to the jQuery element.
 - **options** ```object```    
   *[same as above]* 
 
-<div><br></div>
+<h1></h1>
 
 #### $(jQuery Element).tip()
 
 Clear the tip on the jQuery element
 
-<div><br></div>
