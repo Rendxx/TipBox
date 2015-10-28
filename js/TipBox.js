@@ -64,6 +64,7 @@ API:
         var offset = $this.offset();
         if (tipData.ele == null) {
             tipData.ele = _createTip(tipData.opts);
+            $this.bind('mouseleave', _hideTip);
             tipData.orientation = tipData.opts.orientation;
             delete tipData["opts"];
         }
@@ -361,7 +362,6 @@ API:
             // create new tip & hover function
             $this.data(keyName, {ele:null, opts:options});
             $this.bind('mouseenter',  _showTip);
-            $this.bind('mouseleave', _hideTip);
             //if (window.event && $this.contains(window.event.srcElement)) $this.mouseenter()
         });
 
