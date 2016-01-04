@@ -5,7 +5,7 @@ The tip is always point to the center of the element, and will be resized to fit
 ![preview](https://raw.githubusercontent.com/Rendxx/TipBox/master/preview.png "Preview")
 
 *Sample: [http://www.rendxx.com/Lib/Sample/2](http://www.rendxx.com/Lib/Sample/2 "Sample")*  
-*Download: [TipBox v0.2.3](https://github.com/Rendxx/TipBox/releases/tag/0.2.3 "Download")*
+*Download: [TipBox v0.2.4](https://github.com/Rendxx/TipBox/releases/tag/0.2.4 "Download")*
 
 ## Install
 Download the package from bower

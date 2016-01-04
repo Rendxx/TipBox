@@ -3,8 +3,8 @@ Tip Box
 Copyright (c) 2014-2015 Dongxu Ren  http://www.rendxx.com/
 
 License: MIT (http://www.opensource.org/licenses/mit-license.php)
-Version: 0.2.2
-Update: 2015-10-14
+Version: 0.2.4
+Update: 2016-01-04
 
 Description:
     Add a tip box to the jQuery element. The tip box will show on mouse hover.
@@ -317,7 +317,7 @@ API:
 
     // html element
     var _htmlData = {
-        'container': '<div style="width:1px; height:1px; position:absolute; top:0; left:0; overflow:visible; z-index: 999;"></div>',
+        'container': '<div style="width:1px; height:1px; position:absolute; top:0; left:0; overflow:visible; z-index: 999999;"></div>',
         'wrap': '<div style="width:auto; height:auto; position:absolute; top:0; left:0; overflow:visible;"></div>',
         'box': '<div style="width:auto; height:auto; position:relative; overflow:visible; margin:0; border:0;"></div>',
         'content': '<div style="width:auto; height:auto; position:absolute; top:50%; left:50%; overflow:visible; display: block;"></div>',
