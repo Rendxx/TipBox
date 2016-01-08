@@ -3,8 +3,8 @@ Tip Box
 Copyright (c) 2014-2015 Dongxu Ren  http://www.rendxx.com/
 
 License: MIT (http://www.opensource.org/licenses/mit-license.php)
-Version: 0.2.4
-Update: 2016-01-04
+Version: 0.2.5
+Update: 2016-01-08
 
 Description:
     Add a tip box to the jQuery element. The tip box will show on mouse hover.
@@ -129,76 +129,42 @@ API:
     };
 
     // tip html create --------------------------------------------------------------
-    var _createPointer = function (bottom, reduce, orientation) {
-        var init_w = 0;       // initial width
-        var init_h = 0;       // initial height
-        var reduce_w = 0;     // reduced width for each step
-        var reduce_h = 0;     // reduced height for each step
-        var init_t = 0;       // initial top for each step
-        var init_l = 0;       // initial left for each step
-        var offset_t = 0;     // offset top for each step
-        var offset_l = 0;     // offset left for each step
-
-        var round = Math.floor((bottom + 1) / (2 * reduce));
+    var _createPointer = function (size, orientation, color) {
         var container = $(_htmlData.pointer);
+        var pointer = $(_htmlData.pointer_in)
+            .css( 'border-width', size/2+'px')
+            .appendTo(container);
+
         if (orientation == "top") {
-            init_w = bottom;
-            init_h = 1;
-            reduce_w = reduce * 2;
-            reduce_h = 0;
-            init_t = 0;
-            init_l = 0;
-            offset_t = 1;
-            offset_l = 1;
-        } else if (orientation == "left") {
-            init_w = 1;
-            init_h = bottom;
-            reduce_w = 0;
-            reduce_h = reduce * 2;
-            init_t = 0;
-            init_l = 0;
-            offset_t = 1;
-            offset_l = 1;
-        } else if (orientation == "bottom") {
-            init_w = bottom;
-            init_h = 1;
-            reduce_w = reduce * 2;
-            reduce_h = 0;
-            init_t = round - 1;
-            init_l = 0;
-            offset_t = -1;
-            offset_l = 1;
-        } else if (orientation == "right") {
-            init_w = 1;
-            init_h = bottom;
-            reduce_w = 0;
-            reduce_h = reduce * 2;
-            init_t = 0;
-            init_l = round - 1;
-            offset_t = 1;
-            offset_l = -1;
-        }
-
-        if (init_w > 1)
-            container.width(bottom).height(round);
-        else
-            container.width(round).height(bottom);
-
-        for (var i = 0; i < round; i++) {
-            var line = $("<div></div>");
-            container.append(line);
-            line.css({
-                position: "absolute",
-                width: init_w,
-                height: init_h,
-                top: init_t,
-                left: init_l
+            container.width(size).height(size / 2);
+            pointer.css({
+                'border-top-color': color,
+                'left': 0,
+                'top': 0
             });
-            init_w -= reduce_w;
-            init_h -= reduce_h;
-            init_t += offset_t;
-            init_l += offset_l;
+        } else if (orientation == "left") {
+            container.width(size / 2).height(size);
+            pointer.css({
+                'border-left-color': color,
+                'left': 0,
+                'top': 0
+            });
+        } else if (orientation == "bottom") {
+            container.width(size).height(size / 2);
+            pointer.css({
+                'border-bottom-color': color,
+                'left': 0,
+                'bottom': 0
+            });
+        } else if (orientation == "right") {
+            container.width(size / 2).height(size);
+            pointer.css({
+                'border-right-color': color,
+                'right': 0,
+                'top': 0
+            });
         }
+
         return container;
     };
     
@@ -226,7 +192,7 @@ API:
         var wrap = $(_htmlData.wrap).appendTo(container);
         var box = $(_htmlData.box).appendTo(wrap);
         var content = $(_htmlData.content).appendTo(box);
-        var pointer = _createPointer(10, 1, options.orientation).appendTo(wrap);
+        var pointer = _createPointer(10, options.orientation, options.css["background-color"]).appendTo(wrap);
 
         // set content
         var rawSize = _findContentSize(options.content, options.cssClass, options.css);
@@ -240,8 +206,6 @@ API:
         box.addClass(options.cssClass).css(options.css);
         if (_checkAuto(options.css.width)) box.width(rawSize[0]);
         if (_checkAuto(options.css.height)) box.height(rawSize[1]);
-        for (var i = 0, eles = pointer.children("div"), l = eles.length; i < l ; i++)
-            $(eles[i]).css("background-color", options.css["background-color"]);
 
         // adjust layout
         var pointer_wid = pointer.width();
@@ -321,7 +285,8 @@ API:
         'wrap': '<div style="width:auto; height:auto; position:absolute; top:0; left:0; overflow:visible;"></div>',
         'box': '<div style="width:auto; height:auto; position:relative; overflow:visible; margin:0; border:0;"></div>',
         'content': '<div style="width:auto; height:auto; position:absolute; top:50%; left:50%; overflow:visible; display: block;"></div>',
-        'pointer': '<div style="width:auto; height:auto; position:absolute;"></div>'
+        'pointer': '<div style="width:auto; height:auto; position:absolute; overflow:hidden;"></div>',
+        'pointer_in': '<div style="width:0; height:0; border:10px solid transparent; position:absolute;"></div>'
     };
     // -------------------------------------------------------------------------
     
